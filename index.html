@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Library</title>
+
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./script.js" defer></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Digital Library</h1>
+                <hr />
+            </div>
+            <div class="card-container">
+                <div class="book-card"></div>
+                <div class="book-card">
+                    <div class="card-push-top">
+                        <div class="book-title">The Hobbit</div>
+                        <div class="card-content">
+                            <div class="card-left">
+                                <p>
+                                    by
+                                    <span class="book-author"
+                                        >J. R. R. Tolkien</span
+                                    >
+                                </p>
+                            </div>
+                            <div class="card-divider"></div>
+                            <div class="card-right">
+                                <div class="text-pair">
+                                    <div class="key">Current page:</div>
+                                    <div class="value">122</div>
+                                </div>
+                                <hr/>
+                                <div class="text-pair">
+                                    <div class="key">Total pages:</div>
+                                    <div class="value">304</div>
+                                </div>
+                                <hr/>
+                                <div class="text-pair">
+                                    <div class="key">Progress: </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                </div>
+                                <hr/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-push-bot">
+                        <hr />
+                        <div class="book-status">In progress</div>
+                    </div>
+                    <div class="more-btn">
+                        <img draggable="false" class="more-icon" src="./assets/icons/more.svg" alt="... icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add-button"></div>
+    </body>
+</html>
