@@ -7,6 +7,8 @@
     --progress-fill: #29cc5a;
 
     --btn-select: #5d6880;
+
+    --more-btn: #aa9aff;
 }
 
 * {
@@ -70,14 +72,52 @@ hr {
     justify-items: center;
 }
 
-.add-button {
-    width: 50px;
-    height: 50px;
-    background-color: red;
+.add-btn {
+    width: 60px;
+    height: 60px;
+    background-color: var(--more-btn);
+    border-radius: 50%;
 
     position: fixed;
     bottom: 0;
     right: 0;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.add-btn {
+    transform: translateX(-30px) translateY(-30px);
+}
+
+
+.add-img {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: 1.1s;
+}
+
+.add-img:hover {
+    cursor: pointer;
+    animation: hoverRotate 0.4s ease-in-out;
+}
+
+@keyframes hoverRotate {
+    0% {
+        rotate: 0rad;
+    }
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        rotate: 180deg;
+    }
 }
 
 .book-card {
@@ -114,12 +154,25 @@ hr {
 
 .more-btn:hover {
     cursor: pointer;
-    background-color: var(--btn-select)
+    background-color: var(--btn-select);
+    animation: fadeIn 0.4s forwards;
 }
 
 .more-icon {
     width: 30px;
+}
+
+.icon-white {
     filter: invert(79%) sepia(7%) saturate(41%) hue-rotate(166deg) brightness(121%) contrast(105%);
+}
+
+@keyframes fadeIn {
+    0% {
+        background-color: var(--bg-secondary-color)
+    }
+    100% {
+        background-color: var(--btn-select)
+    }
 }
 
 .card-content {
@@ -167,6 +220,8 @@ hr {
     height: 14px;
     background-color: var(--progress-bg);
     border-radius: 4px;
+
+    position: relative;
 }
 
 .progress-fill {
@@ -175,6 +230,14 @@ hr {
 
     background-color: var(--progress-fill);
     border-radius: 4px 0px 0px 4px;
+}
+
+.progress-text {
+    position: absolute;
+    font-size: 11px;
+    top: -2px;
+    left: 14px;
+
 }
 
 .card-push-top {
