@@ -41,20 +41,20 @@
                                     <div class="key">Current page:</div>
                                     <div class="value">122</div>
                                 </div>
-                                <hr/>
+                                <hr />
                                 <div class="text-pair">
                                     <div class="key">Total pages:</div>
                                     <div class="value">304</div>
                                 </div>
-                                <hr/>
+                                <hr />
                                 <div class="text-pair">
-                                    <div class="key">Progress: </div>
+                                    <div class="key">Progress:</div>
                                     <div class="progress-bar">
                                         <div class="progress-fill"></div>
                                         <div class="progress-text">40%</div>
                                     </div>
                                 </div>
-                                <hr/>
+                                <hr />
                             </div>
                         </div>
                     </div>
@@ -63,13 +63,95 @@
                         <div class="book-status">In progress</div>
                     </div>
                     <div class="more-btn">
-                        <img draggable="false" class="more-icon icon-white" src="./assets/icons/more.svg" alt="... icon">
+                        <img
+                            draggable="false"
+                            class="more-icon icon-white"
+                            src="./assets/icons/more.svg"
+                            alt="... icon"
+                        />
                     </div>
                 </div>
             </div>
         </div>
         <div class="add-btn">
-            <img class="add-img icon-white" src="./assets/icons/add-harsh.svg" alt="+ add icon">
+            <img
+                class="add-img icon-white"
+                src="./assets/icons/add-harsh.svg"
+                alt="+ add icon"
+            />
+        </div>
+
+        <div class="add-pop-up active" onclick="closePopup()">
+            <div class="pop-up-container" onclick="event.stopPropagation()">
+                <div class="pop-up-hr text">Add new book</div>
+                <hr style="margin-bottom: -12px" />
+                <form>
+                    <div class="input-pair">
+                        <label class="text" for="title">Book Title</label>
+                        <input class="text-inp text" name="title" type="text" />
+                    </div>
+
+                    <div class="input-pair">
+                        <label class="text" for="author">Author</label>
+                        <input
+                            class="text-inp text"
+                            name="author"
+                            type="text"
+                        />
+                    </div>
+
+                    <div class="input-pair">
+                        <label class="text" for="pages-read">Pages Read</label>
+                        <input
+                            class="text-inp text"
+                            name="pages-read"
+                            type="number"
+                        />
+                    </div>
+
+                    <div class="input-pair">
+                        <label class="text" for="total-pages"
+                            >Total Pages</label
+                        >
+                        <input
+                            class="text-inp text"
+                            name="total-pages"
+                            type="number"
+                        />
+                    </div>
+
+                    <hr />
+
+                    <div
+                        class="align-btns"
+                        style="
+                            width: 90%;
+                            margin-top: 10px;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                        "
+                    >
+                        <label class="dropdown">
+                            <div class="dd-button">Status</div>
+
+                            <ul class="dd-menu">
+                                <li>Reading</li>
+                                <hr />
+                                <li>Completed</li>
+                                <hr />
+                                <li>Plan to read</li>
+                                <hr />
+                                <li>Paused</li>
+                            </ul>
+                        </label>
+
+                        <div class="confirm-add-btn ">
+                            <img draggable="false" class="icon-white" src="./assets/icons/done.svg" alt="check icon">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
