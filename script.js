@@ -237,6 +237,7 @@ confirmBtn.addEventListener("click", (e) => {
         bookPagesRead.value,
         statusVal
     );
+    nextBook.totalPages = bookTotalPages.value;
 
     createBookElement(nextBook);
     popup.classList.toggle("active");
