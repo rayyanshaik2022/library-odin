@@ -16,6 +16,9 @@
 
     --confirm-card-bg: #4fd978;
     --confirm-card-active: #4ec572;
+
+    --delete-card-bg: #d94f4f;
+    --delete-card-active: #c54e4e;
 }
 
 * {
@@ -276,10 +279,10 @@ hr {
     }
 }
 
-.add-pop-up {
+.add-pop-up, .edit-pop-up {
     display: none;
 }
-.add-pop-up.active {
+.add-pop-up.active, .edit-pop-up.active {
     position: fixed;
 
     width: 100vw;
@@ -296,7 +299,7 @@ hr {
     justify-content: center;
 }
 
-.pop-up-container {
+.pop-up-container, .edit-pop-up-container {
     position: relative;
 
     width: 50vw;
@@ -336,6 +339,7 @@ hr {
 .pop-up-container > hr {
     margin-bottom: 24px;
 }
+
 
 form {
     display: flex;
@@ -509,5 +513,33 @@ a {
 
   .confirm-add-btn.valid:hover {
     background-color: var(--confirm-card-active);
+    cursor: pointer;
+  }
+
+
+
+  .delete-btn {
+    margin-left: auto;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--delete-card-bg);
+    border: 2px solid var(--delete-card-bg);
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .delete-btn > img:hover {
+    transform: scale(1.15);
+    transition: all .2s ease-in-out;
+  }
+
+  .delete-btn:hover {
+    background-color: var(--delete-card-active);
     cursor: pointer;
   }

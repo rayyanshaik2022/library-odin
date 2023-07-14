@@ -81,10 +81,10 @@
             />
         </div>
 
-        <div class="add-pop-up active" onclick="closePopup()">
+        <div class="add-pop-up" onclick="closePopup()">
             <div class="pop-up-container" onclick="event.stopPropagation()">
                 <div class="pop-up-hr text">Add new book</div>
-                <hr style="margin-bottom: -12px" />
+                <hr style="margin-bottom: -2px" />
                 <form>
                     <div class="input-pair">
                         <label class="text" for="title">Book Title</label>
@@ -148,6 +148,83 @@
 
                         <div class="confirm-add-btn ">
                             <img draggable="false" class="icon-white" src="./assets/icons/done.svg" alt="check icon">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="edit-pop-up" onclick="closeEditPopup()">
+            <div class="edit-pop-up-container" onclick="event.stopPropagation()">
+                <div class="pop-up-hr text">Edit book</div>
+            
+                <form>
+                    <div class="input-pair">
+                        <label class="text" for="edit-title">Book Title</label>
+                        <input class="text-inp text" name="edit-title" type="text" />
+                    </div>
+
+                    <div class="input-pair">
+                        <label class="text" for="edit-author">Author</label>
+                        <input
+                            class="text-inp text"
+                            name="edit-author"
+                            type="text"
+                        />
+                    </div>
+
+                    <div class="input-pair">
+                        <label class="text" for="edit-pages-read">Pages Read</label>
+                        <input
+                            class="text-inp text"
+                            name="edit-pages-read"
+                            type="number"
+                        />
+                    </div>
+
+                    <div class="input-pair">
+                        <label class="text" for="edit-total-pages"
+                            >Total Pages</label
+                        >
+                        <input
+                            class="text-inp text"
+                            name="edit-total-pages"
+                            type="number"
+                        />
+                    </div>
+
+                    <hr />
+
+                    <div
+                        class="align-btns"
+                        style="
+                            width: 90%;
+                            margin-top: 10px;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                        "
+                    >
+                        <label class="dropdown">
+                            <div id="dd-btn-edit" class="dd-button">Reading</div>
+
+                            <ul id="dd-menu-edit" class="dd-menu">
+                                <li id="read-btn-edit">Reading</li>
+                                <hr />
+                                <li id="comp-btn-edit">Completed</li>
+                                <hr />
+                                <li id="plan-btn-edit">Plan to read</li>
+                                <hr />
+                                <li id="paus-btn-edit">Paused</li>
+                            </ul>
+                        </label>
+
+                        <div id="delete-btn" class="delete-btn">
+                            <img draggable="false" class="icon-white" src="./assets/icons/delete.svg" alt="check icon">
+                        </div>
+
+                        <div id="confirm-edit-btn" class="confirm-add-btn ">
+                            <img draggable="false" class="icon-white" src="./assets/icons/save.svg" alt="check icon">
                         </div>
                     </div>
                 </form>
